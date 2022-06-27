@@ -18,9 +18,9 @@ function renderText(){
     var padding_top=0;
     var padding_bottom=0;
     const CHAR_SCALE=0.25;
-    const CHAR_WIDTH=1000*CHAR_SCALE;
-    const CHAR_HEIGHT=1000*CHAR_SCALE;
     const CHAR_PADDING=20;
+    const CHAR_WIDTH=(1000+CHAR_PADDING)*CHAR_SCALE;
+    const CHAR_HEIGHT=(1000+CHAR_PADDING)*CHAR_SCALE;
     const CANVAS_WIDTH=(CHAR_WIDTH+CHAR_PADDING)*longest_line-CHAR_PADDING;
     const CANVAS_HEIGHT=(CHAR_HEIGHT+CHAR_PADDING)*lines.length+CHAR_PADDING;
     canvas.width = CANVAS_WIDTH;
@@ -53,7 +53,7 @@ function renderText(){
                     }
                     ctx.stroke();                                    
                 }
-
+                
                 for (var i=0;i<medians.length-1;i++){        
                     var end_point = medians[i][medians[i].length-1];
                     var next_start = medians[i+1][0];
