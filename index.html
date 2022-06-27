@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Strichfolgepfeile</title>
+    <Style>
+        /* text-area font size is 200% of the default font size */
+        textarea {
+            font-size: 200%;
+        }
+        /* 1px border around canvas */
+        canvas {
+            border: 1px solid black;
+        }
+    </Style>
+    <!--import median_dict.js-->
+    <script src="median_dict.js"></script>
+    <!--import renderer.js-->
+    <script src="renderer.js"></script>
+
+  </head>
+  <body>
+    <!--form with textarea and submit button. Triggers javascript on click-->
+    Schreib diene Zeichen hierhin:<br>
+    <form id="form">
+      <textarea name="text" id="text" rows="6" cols="10">人之初
+性本善
+性相近
+習相遠</textarea><br>
+    </form>
+    <button onclick="renderText()">Zeig!</button>
+    <p>
+    <canvas id="canvas" width="1000" height="1000"></canvas>
+
+  </body>
+</html>
